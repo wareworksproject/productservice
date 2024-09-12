@@ -3,11 +3,22 @@ package com.wareworks.productservice;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+//public class ServletInitializer extends SpringBootServletInitializer {
+
+	//@Override
+	//protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		//return application.sources(ProductserviceApplication.class);
+	//}
+
+//}
+
 public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(ProductserviceApplication.class);
+		return application
+			.sources(ProductserviceApplication.class)
+		        .properties("server.servlet.context-path=/productservice");
 	}
 
 }
