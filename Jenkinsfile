@@ -44,7 +44,7 @@ sh 'mvn test'
     
 stage('Rename Package'){
 steps {
-sh 'mv ${WORKSPACE}/target/*.war ${WORKSPACE}/target/myjava.war'
+sh 'mv ${WORKSPACE}/target/*.war ${WORKSPACE}/target/productservice.war'
 }
 }
     
